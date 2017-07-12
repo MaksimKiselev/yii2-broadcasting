@@ -1,0 +1,26 @@
+{
+    "name": "mkiselev/yii2-broadcasting",
+    "description": "Websocket broadcasting module",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "echo",
+        "websocket"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maksim Kiselev",
+            "email": "maks280795@yandex.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mkiselev\\broadcasting\\": ""
+        }
+    }
+}
