@@ -5,7 +5,7 @@ Websocket broadcasting module
 [![Latest Stable Version](https://poser.pugx.org/mkiselev/yii2-broadcasting/v/stable?format=flat-square)](https://packagist.org/packages/mkiselev/yii2-broadcasting)
 [![Total Downloads](https://poser.pugx.org/mkiselev/yii2-broadcasting/downloads?format=flat-square)](https://packagist.org/packages/mkiselev/yii2-broadcasting)
 [![Latest Unstable Version](https://poser.pugx.org/mkiselev/yii2-broadcasting/v/unstable?format=flat-square)](https://packagist.org/packages/mkiselev/yii2-broadcasting)
-[![License](https://poser.pugx.org/mkiselev/yii2-broadcasting/license?format=flat-square?format=flat-square)](https://packagist.org/packages/mkiselev/yii2-broadcasting)
+[![License](https://poser.pugx.org/mkiselev/yii2-broadcasting/license?format=flat-square)](https://packagist.org/packages/mkiselev/yii2-broadcasting)
 [![Monthly Downloads](https://poser.pugx.org/mkiselev/yii2-broadcasting/d/monthly?format=flat-square)](https://packagist.org/packages/mkiselev/yii2-broadcasting)
 
 This module is made under inspiration of laravel echo and compatible with libraries.
