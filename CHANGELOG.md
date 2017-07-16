@@ -1,4 +1,4 @@
-# Yii2-broadcaster CHANGELOG
+# Yii2-broadcasting CHANGELOG
 
 ### 0.0.2
  - Add docker config for laravel-echo-server (@KoJIT2009)
