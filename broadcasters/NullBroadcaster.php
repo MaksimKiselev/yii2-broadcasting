@@ -11,14 +11,12 @@ class NullBroadcaster extends Broadcaster
     {
     }
 
-
     /**
      * {@inheritdoc}
      */
     public function validAuthenticationResponse($user, $result)
     {
     }
-
 
     /**
      * {@inheritdoc}

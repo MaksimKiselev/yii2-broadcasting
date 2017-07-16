@@ -13,14 +13,12 @@ class LogBroadcaster extends Broadcaster
     {
     }
 
-
     /**
      * {@inheritdoc}
      */
     public function validAuthenticationResponse($user, $result)
     {
     }
-
 
     /**
      * {@inheritdoc}

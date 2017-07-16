@@ -64,11 +64,6 @@ Configure module for use some broadcaster and configure channels auth callbacks:
 ],
 ```
 
-Configure auth endpoint in urlManager component, by default using 'example.com/broadcasting/auth'
-```php
-'broadcasting/auth' => '/broadcasting/default/index'
-```
-
 
 Socket.io server configuration
 ------------------------------
@@ -128,3 +123,5 @@ Echo.channel('signal')
         console.log(e.someParam);
     });
 ```
+
+#### [CHANGELOG](CHANGELOG.md)

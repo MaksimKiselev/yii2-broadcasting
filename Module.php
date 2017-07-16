@@ -7,10 +7,13 @@ use mkiselev\broadcasting\components\BroadcastManager;
 use yii\base\Application;
 use yii\base\BootstrapInterface;
 use yii\di\Instance;
+use yii\web\UrlRule;
 
 class Module extends \yii\base\Module implements BootstrapInterface
 {
-    public $defaultRoute = 'broadcasting/auth';
+    /** @var string Auth endpoint */
+    public $authEndpoint = 'broadcasting/auth';
+
     /**
      * @var string|array|\mkiselev\broadcasting\components\BroadcastManager
      */
@@ -20,12 +23,6 @@ class Module extends \yii\base\Module implements BootstrapInterface
      * @var string|array|\mkiselev\broadcasting\broadcasters\Broadcaster
      */
     public $broadcaster;
-
-    /**
-     * @inheritdoc
-     */
-    public $controllerNamespace = 'mkiselev\broadcasting\controllers';
-
 
     /**
      * @return \mkiselev\broadcasting\components\BroadcastManager|string
@@ -51,13 +48,21 @@ class Module extends \yii\base\Module implements BootstrapInterface
         return $this->broadcaster;
     }
 
-
     /**
      * Bootstrap method to be called during application bootstrap stage.
      * @param Application $app the application currently running
      */
     public function bootstrap($app)
     {
+        if ($app instanceof \yii\web\Application) {
+            $app->getUrlManager()->addRules([
+                [
+                    'class' => UrlRule::class,
+                    'pattern' => $this->authEndpoint,
+                    'route' => $this->id . '/default/index',
+                ],
+            ]);
+        }
     }
 
 }

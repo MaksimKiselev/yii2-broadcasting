@@ -13,7 +13,6 @@ interface BroadcasterInterface
      */
     public function auth($user, $channelName);
 
-
     /**
      * Return the valid authentication response.
      *
@@ -22,7 +21,6 @@ interface BroadcasterInterface
      * @return mixed
      */
     public function validAuthenticationResponse($user, $result);
-
 
     /**
      * Broadcast the given event.

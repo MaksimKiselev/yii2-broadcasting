@@ -25,7 +25,6 @@ class StrHelper
         return (bool)preg_match('#^' . $pattern . '\z#u', $value);
     }
 
-
     /**
      * Determine if a given string starts with a given substring.
      *
@@ -43,7 +42,6 @@ class StrHelper
 
         return false;
     }
-
 
     /**
      * Replace the first occurrence of a given value in the string.

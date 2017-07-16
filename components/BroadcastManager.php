@@ -33,7 +33,6 @@ class BroadcastManager extends Component
         Module::getInstance()->getBroadcasterInstance()->broadcast($channels, $name, $payload);
     }
 
-
     /**
      * Get the socket ID for the current request
      *

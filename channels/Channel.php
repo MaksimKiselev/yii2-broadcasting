@@ -21,7 +21,6 @@ class Channel
         $this->name = $name;
     }
 
-
     /**
      * Convert the channel instance to a string
      *

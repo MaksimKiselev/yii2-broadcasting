@@ -5,6 +5,7 @@ namespace mkiselev\broadcasting\events;
 use mkiselev\broadcasting\Module;
 use ReflectionClass;
 use ReflectionProperty;
+use Yii;
 use yii\base\Object;
 
 /**
@@ -28,7 +29,6 @@ abstract class BroadcastEvent extends Object
         return $this;
     }
 
-
     /**
      * @return bool
      */
@@ -44,7 +44,6 @@ abstract class BroadcastEvent extends Object
      */
     abstract public function broadcastOn();
 
-
     /**
      * The event's broadcast name
      *
@@ -54,7 +53,6 @@ abstract class BroadcastEvent extends Object
     {
         return str_replace('\\', '.', static::class);
     }
-
 
     /**
      * Get the data to broadcast
@@ -75,13 +73,16 @@ abstract class BroadcastEvent extends Object
         return $data;
     }
 
-
     /**
      * Broadcast this event
      */
     final public function broadcast()
     {
-        Module::getInstance()->getBroadcastManagerInstance()->dispatchEvent($this);
+        try {
+            Module::getInstance()->getBroadcastManagerInstance()->dispatchEvent($this);
+        } catch (\Exception $e) {
+            Yii::error($e);
+        }
     }
 
 }

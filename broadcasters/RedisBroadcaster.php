@@ -22,7 +22,6 @@ class RedisBroadcaster extends Broadcaster
         $this->redis = Instance::ensure($this->redis);
     }
 
-
     /**
      * Authenticate the incoming request for a given channel.
      *
@@ -44,7 +43,6 @@ class RedisBroadcaster extends Broadcaster
         return parent::verifyUserCanAccessChannel($user, $channelName);
     }
 
-
     /**
      * Return the valid authentication response.
      *
@@ -63,7 +61,6 @@ class RedisBroadcaster extends Broadcaster
             'user_info' => $result,
         ]]);
     }
-
 
     /**
      * Broadcast the given event.

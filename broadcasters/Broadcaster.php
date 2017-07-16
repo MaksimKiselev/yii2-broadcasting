@@ -29,7 +29,6 @@ abstract class Broadcaster extends Component implements BroadcasterInterface
         return $this;
     }
 
-
     /**
      * Authenticate the incoming request for a given channel.
      *
@@ -56,7 +55,6 @@ abstract class Broadcaster extends Component implements BroadcasterInterface
         throw new ForbiddenHttpException(403);
     }
 
-
     /**
      * Extract the parameters from the given pattern and channel.
      *
@@ -74,7 +72,6 @@ abstract class Broadcaster extends Component implements BroadcasterInterface
         }, ARRAY_FILTER_USE_BOTH);
     }
 
-
     /**
      * Extract the channel keys from the incoming channel name.
      *
@@ -88,7 +85,6 @@ abstract class Broadcaster extends Component implements BroadcasterInterface
 
         return $keys;
     }
-
 
     /**
      * Format the channel array into an array of strings.
