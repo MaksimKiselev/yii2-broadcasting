@@ -118,7 +118,7 @@ window.Echo = new Echo({
     host: window.location.hostname + ':6001'
 });
 
-Echo.channel('signal')
+Echo.channel('private-signal')
     .listen('.new', function(e) {
         console.log(e.someParam);
     });
