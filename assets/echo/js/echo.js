@@ -728,7 +728,19 @@
             createClass(SocketIoConnector, [{
                 key: 'connect',
                 value: function connect() {
-                    this.socket = io(this.options.host, this.options);
+                    // dummy object to prevent break other scripts if io is undefined
+                    this.socket = {
+                        id: null,
+                        emit: function () {},
+                        on: function () {}
+                    };
+
+                    try {
+                        this.socket = io(this.options.host, this.options);
+                    } catch (ex) {
+                        console.log(ex);
+                    }
+
                     return this.socket;
                 }
             }, {
